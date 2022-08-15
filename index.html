@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h2>computer choice:<span id="computer_choice"></span></h2>
-    <h2>your choice:<span id="user_choice"></span></h2>
-    <h2>result:<span id="result"></span></h2>
-
-    <button id="rock">rock</button>
-    <button id="paper">paper</button>
-    <button id="scissors">scissors</button>
-
-    
-
+    <div class="all_choices">
+        <button id="rock" class="choice">✊</button>
+        <button id="paper" class="choice">🖐</button>
+        <button id="scissors" class="choice">✌</button>
+    </div>
+    <div class="choice_display">
+        <h2>COMPUTER : <span id="computer_choice"></span></h2>
+        <h2>YOU : <span id="user_choice"></span></h2>
+    </div>
+    <div>
+        <img src="img.jpg" width="400px" alt="computer vs you">
+    </div>
+    <div class="result-container">
+        <span id="result"></span>
+    </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>

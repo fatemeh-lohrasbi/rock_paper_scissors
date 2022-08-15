@@ -8,12 +8,14 @@ let user_choice;
 let computer_choice;
 let result;
 
-all_choices.forEach(element => element.addEventListener('click', (e) => {
-    user_choice = e.target.id;
-    user_choice_display.innerHTML = user_choice;
-    generateComputerChoice();
-    get_result();
-}))
+all_choices.forEach(element => {
+        element.addEventListener('click', (e) => {
+        user_choice = e.target.id;
+        user_choice_display.innerHTML = user_choice;
+        generateComputerChoice();
+        get_result();
+    })
+})
 
 function generateComputerChoice() {
     const random_num = Math.floor(Math.random() * 3 + 1);
@@ -33,25 +35,25 @@ function generateComputerChoice() {
 
 function get_result() {
     if (computer_choice === user_choice) {
-        result = "it is a draw! 🤝";
+        result = "IT IS A DRAW! 🤝";
     }
     if (computer_choice === 'rock' && user_choice === 'scissors') {
-        result = "you lost! 😥";
+        result = "YOU LOST! 😥";
     }
     if (computer_choice === 'scissors' && user_choice === 'rock') {
-        result = "you win! 😍";
+        result = "YOU WIN! 😍";
     }
     if (computer_choice === 'rock' && user_choice === 'paper') {
-        result = "you win! 😍";
+        result = "YOU WIN! 😍";
     }
     if (computer_choice === 'paper' && user_choice === 'rock') {
-        result = "you lost! 😥";
+        result = "YOU LOST! 😥";
     }
     if (computer_choice === 'paper' && user_choice === 'scissors') {
-        result = "you win! 😍";
+        result = "YOU WIN! 😍";
     }
     if (computer_choice === 'scissors' && user_choice === 'paper') {
-        result = "you lost! 😥";
+        result = "YOU LOST! 😥";
     }
     result_display.innerHTML = result;
 }
